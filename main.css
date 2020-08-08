@@ -1,0 +1,25 @@
+/* body styling */
+body {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 1.0);
+    color: rgb(255, 255, 255);
+    font-size: 1.2em;
+}
+
+/* header styles */
+header {
+background-color: #0f4c75;
+padding: 0.5em;
+}
+
+input {
+    border-radius: 1.0em;
+    border: none;
+    padding: 0.5rem;
+}
+
+button {
+    border: none;
+    border-radius: 0.8em;
+    padding: 0.5rem;
+}
