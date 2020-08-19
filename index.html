@@ -5,9 +5,36 @@
     <link rel="stylesheet" type="text/css" href="main.css">
     </head>
     <body>
+        <div class="search">
         <header><b>Github Profile Finder</b></header>
         <p>Enter a username here to get their profile and repositories</p>
-        <input type="text" placeholder="username">
-        <button type="search">Search</button> 
+        <input type="text" id="username" placeholder="username">
+    </div>
+        <!-- <button type="search">Search</button>  -->
+        <div id="profile">
+            <img src="profileImage.jpg" alt="user's profile picture">
+            <button type="button">View Profile</button>
+        </div>
+        <div id="profileInformation">
+            <ul>
+                <li class="status">Following: 0</li>
+                <li class="status">Followers: 0</li>
+                <li>Company: Null</li>
+                <li>Website/Blog:</li>
+                <li>Location: null</li>
+                <li>Date joined: 2015-10-09</li>
+            </ul>
+        </div>
+        <h3>Latest Repos</h3>
+        <div id="latestRepos">
+           <ol>
+                <li>Stars: 0</li>
+                <li>Forks: 5</li>
+            </ol>
+        </div>
+
+        <script src="github.js"></script>
+        <script src="ui.js"></script>
+        <script src="app.js"></script>
     </body>
 </html>

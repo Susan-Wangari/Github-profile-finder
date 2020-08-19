@@ -18,8 +18,50 @@ input {
     padding: 0.5rem;
 }
 
-button {
-    border: none;
-    border-radius: 0.8em;
-    padding: 0.5rem;
+img {
+    max-width: 25%;
+    float: left;
+    margin-top: 3em;
+    margin-left: 3em;
 }
+
+/* .profile {
+    float: left;
+} */
+
+button {
+    margin-left: -17em;
+    margin-top: 27em;
+    float: left;
+    border: none;
+    border-radius: 1.0em;
+    border: none;
+    padding: 0.6em;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ol {
+    list-style-type: none;
+}
+
+h3 {
+    float: left;
+    margin-top: 10em;
+}
+
+#profileInformation {
+    margin-top: 5em;
+}
+#latestRepos {
+    float: left;
+    margin-top: 13em;
+    margin-left: -8em;
+}
+/* 
+.status {
+    box-sizing: border-box;
+    box-shadow: 1px 0px 1px 0px rgb(255, 255, 255);
+} */
