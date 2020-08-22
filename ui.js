@@ -1,6 +1,6 @@
 class UI {
     constructor() {
-        this.profile = document.getElementById('profile');
+        this.profile = document.getElementById('container');
     }
     //displays the profile
     showProfile(user) {
@@ -11,23 +11,25 @@ class UI {
     </div>
     <div id="profileInformation">
         <ul>
-            <li class="status">Following: 0</li>
-            <li class="status">Followers: 0</li>
-            <li>Company: Null</li>
-            <li>Website/Blog:</li>
-            <li>Location: null</li>
-            <li>Date joined: 2015-10-09</li>
+            <li class="status">Following: ${user.followers}</li>
+            <li class="status">Followers: ${user.following}</li>
+            <li>Company: ${user.company}</li>
+            <li>Website/Blog: ${user.blog}</li>
+            <li>Location: ${user.location}</li>
+            <li>Date joined: ${user.created_at}</li>
         </ul>
     </div>
     <h3>Latest Repos</h3>
     <div id="latestRepos">
        <ol>
-            <li>Stars: 0</li>
-            <li>Forks: 5</li>
+    //<a href="${repo.html_url}" target="_blank">${repo.name}</a>
+            <li>Stars: ${repo.stargazers_count}</li>
+            <li>Forks: ${repo.fork_count}</li>
         </ol>
     </div>
     `;
     }
+
     //show user repos
     showRepos(repos) {
         let output = '';
@@ -40,8 +42,9 @@ class UI {
             `;
         });
         //output repos
-        document.getElementById("latestRepos").innerHTML = output;
+        document.getElementById('latestRepos').innerHTML = output;
     }
+   
     //show alert message
     showAlert(message, className) {
         //clear any other alerts
@@ -53,9 +56,9 @@ class UI {
         //add text
         div.appendChild(document.createTextNode(message));
         //get parent
-        const container = document.querySelector("search");
+        const container = document.querySelector('search');
         //get the search box
-        const search = document.querySelector("username");
+        const search = document.querySelector('username');
         //an alert
         container.insertBefore(div, username);
 
