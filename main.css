@@ -25,18 +25,8 @@ img {
     margin-left: 3em;
 }
 
-/* .profile {
+a {
     float: left;
-} */
-
-button {
-    margin-left: -17em;
-    margin-top: 27em;
-    float: left;
-    border: none;
-    border-radius: 1.0em;
-    border: none;
-    padding: 0.6em;
 }
 
 ul {
@@ -49,7 +39,8 @@ ol {
 
 h3 {
     float: left;
-    margin-top: 10em;
+    margin-top: 5em;
+    margin-left: 10em;
 }
 
 #profileInformation {
@@ -57,8 +48,8 @@ h3 {
 }
 #latestRepos {
     float: left;
-    margin-top: 13em;
-    margin-left: -8em;
+    margin-top: 8em;
+    margin-left: -6em;
 }
 /* 
 .status {

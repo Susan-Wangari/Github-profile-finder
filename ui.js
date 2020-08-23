@@ -6,8 +6,9 @@ class UI {
     showProfile(user) {
         this.profile.innerHTML = `
         <div id="profile">
-        <img src="profileImage.jpg" alt="user's profile picture">
-        <button type="button">View Profile</button>
+        <img src="${user.avatar_url}"> 
+        <a href="${user.html_url}>View profile</a>
+        // <button type="button">View Profile</button>
     </div>
     <div id="profileInformation">
         <ul>
@@ -19,14 +20,6 @@ class UI {
             <li>Date joined: ${user.created_at}</li>
         </ul>
     </div>
-    <h3>Latest Repos</h3>
-    <div id="latestRepos">
-       <ol>
-    //<a href="${repo.html_url}" target="_blank">${repo.name}</a>
-            <li>Stars: ${repo.stargazers_count}</li>
-            <li>Forks: ${repo.fork_count}</li>
-        </ol>
-    </div>
     `;
     }
 
@@ -35,11 +28,11 @@ class UI {
         let output = '';
         repos.forEach(function(repo) {
             output += `
-            <img src="profileImage.jpg" alt="user's profile picture">
-            <button type="button">View Profile</button>
-            <div id="profileInformation>
-            <div id="latestRepos">
-            `;
+            <a href="${repo.html_url}" target="_blank">${repo.name}</a>
+            <ol>
+                    <li>Stars: ${repo.stargazers_count}</li>
+                    <li>Forks: ${repo.forks_count}</li>
+                </ol> `;
         });
         //output repos
         document.getElementById('latestRepos').innerHTML = output;
